@@ -46,8 +46,7 @@ telodata$logAge <- log10(telodata$AgeY)
 
 #~~ make model subset
 
-telodata.all<-droplevels(subset(telodata, !is.na(AgeY) & !is.na(Sex) & !is.na(Technician)
-                                & !is.na(MAC) & !is.na(PAC)))
+telodata.all<-droplevels(subset(telodata, !is.na(AgeY) & !is.na(Sex) & !is.na(Technician) & !is.na(MAC) & !is.na(PAC)))
 
 
 #~~ z-transform sqrt RTL values
@@ -134,7 +133,7 @@ PACpowerplot <- ggplot(PowerData, aes(x=PACeff,y=mean)) +
 
 PACpowerplot
 
-tiff("FigureS1_PACPowerGraph.tif", width=2500, height=2000, res=400)
+tiff("FigureS5_PACPowerGraph.tif", width=2500, height=2000, res=400)
 
 PACpowerplot
 
